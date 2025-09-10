@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sosok Asli Bang Mic - Micko Fahraezi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: "Trebuchet MS", sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(180deg, #87ceeb, #ffffff);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ☁️ Awan */
+    .cloud {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: moveClouds 60s linear infinite;
+    }
+    .cloud::before, .cloud::after {
+      content: "";
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+    }
+    .cloud.small { width: 100px; height: 60px; top: 15%; left: -150px; animation-duration: 70s; }
+    .cloud.medium { width: 160px; height: 90px; top: 40%; left: -200px; animation-duration: 90s; }
+    .cloud.large { width: 220px; height: 120px; top: 65%; left: -250px; animation-duration: 120s; }
+    .cloud::before { width: 60%; height: 60%; top: -30%; left: 10%; }
+    .cloud::after { width: 50%; height: 50%; top: -20%; left: 50%; }
+    @keyframes moveClouds { from { transform: translateX(0); } to { transform: translateX(150vw); } }
+
+    /* Lanyard */
+    .lanyard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: swing 3s infinite ease-in-out;
+      z-index: 2;
+    }
+    .lanyard .circle {
+      width: 60px;
+      height: 60px;
+      background: #0077ff;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: -10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .lanyard .strap {
+      width: 20px;
+      height: 100px;
+      background: #004aad;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    /* ID Card */
+    .id-card {
+      background: #ffffff;
+      width: 320px;
+      padding: 20px;
+      margin-top: -10px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      text-align: center;
+      border: 5px solid #004aad;
+      position: relative;
+    }
+
+    .id-card .photo img {
+      width: 120px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 4px solid #0077ff;
+      margin-bottom: 12px;
+    }
+
+    .id-card h2 { color: #004aad; margin: 10px 0 5px; font-size: 1.5rem; }
+    .id-card p { margin: 4px 0; font-size: 0.9rem; color: #333; }
+    .id-card hr { margin: 15px 0; border: 1px solid #0077ff; }
+    .id-card h3 { color: #0077ff; font-size: 1.1rem; margin-bottom: 10px; }
+
+    .id-card ul {
+      text-align: left;
+      font-size: 0.9rem;
+      margin: 0; padding: 0;
+      list-style: none;
+    }
+    .id-card ul li {
+      background: #f0f8ff;
+      margin: 5px 0;
+      padding: 6px;
+      border-radius: 8px;
+    }
+
+    .id-card .footer {
+      margin-top: 15px;
+      font-weight: bold;
+      color: #004aad;
+    }
+
+    /* Tombol */
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 15px;
+      background: #0077ff;
+      color: #fff;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn:hover { background: #004aad; }
+
+    /* Animasi goyang kartu */
+    @keyframes swing {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(2deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-2deg); }
+      100% { transform: rotate(0deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- ☁️ Awan -->
+  <div class="cloud small"></div>
+  <div class="cloud medium"></div>
+  <div class="cloud large"></div>
+
+  <!-- Lanyard + ID Card -->
+  <div class="lanyard">
+    <div class="circle"></div>
+    <div class="strap"></div>
+    <div class="id-card">
+      <div class="photo">
+        <img src="foto.jpg.jpeg" alt="Foto Micko Fahraezi">
+      </div>
+      <h2>Micko Fahraezi</h2>
+      <p><b>NIM:</b> M0403241033</p>
+      <p><b>TTL:</b> Jakarta,3 Februari 2006</p>
+      <p><b>Program Studi:</b> Ilmu Komputer</p>
+      <p><b>Proxy:</b> Borel</p>
+      <hr>
+      <h3>Track Record di Kampus IPB University</h3>
+      <ul>
+        <li>Ketua Kelompok KTI Anagata Radhika 15 Karya Terbaik PascaMPKMB 2024</li>
+        <li>Volunteer IM-Blinks Batch 2 2024</li>
+        <li>Delegates IMPACT CIRCLE and Brights 3.0</li>
+        <li>Staff Biro Internal Ormawa Eksekutif PKU</li>
+        <li>Staff Divisi Marketing IEEE SB IPB</li>
+        <li>Kepala Divisi Sponshorship and Fundraising STEM 2025</li>
+      </ul>
+      <p class="footer">IPB University</p>
+      <a href="sosmed.html" class="btn">Lihat Media Sosial</a>
+    </div>
+  </div>
+</body>
+</html>
